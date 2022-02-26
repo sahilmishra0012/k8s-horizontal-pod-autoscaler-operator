@@ -1,0 +1,6 @@
+apiVersion: my.domain/v1alpha1
+kind: AutoScaler
+metadata:
+  name: autoscaler-sample
+spec:
+  # TODO(user): Add fields here
