@@ -5,9 +5,9 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.8.0
   creationTimestamp: null
-  name: autoscalers.my.domain
+  name: autoscalers.hpa.zero
 spec:
-  group: my.domain
+  group: hpa.zero
   names:
     kind: AutoScaler
     listKind: AutoScalerList

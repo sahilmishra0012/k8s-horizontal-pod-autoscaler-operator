@@ -6,7 +6,7 @@ metadata:
   name: manager-role
 rules:
 - apiGroups:
-  - my.domain
+  - hpa.zero
   resources:
   - autoscalers
   verbs:
@@ -18,13 +18,13 @@ rules:
   - update
   - watch
 - apiGroups:
-  - my.domain
+  - hpa.zero
   resources:
   - autoscalers/finalizers
   verbs:
   - update
 - apiGroups:
-  - my.domain
+  - hpa.zero
   resources:
   - autoscalers/status
   verbs:

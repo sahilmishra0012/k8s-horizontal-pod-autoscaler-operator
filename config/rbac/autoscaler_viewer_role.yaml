@@ -5,7 +5,7 @@ metadata:
   name: autoscaler-viewer-role
 rules:
 - apiGroups:
-  - my.domain
+  - hpa.zero
   resources:
   - autoscalers
   verbs:
@@ -13,7 +13,7 @@ rules:
   - list
   - watch
 - apiGroups:
-  - my.domain
+  - hpa.zero
   resources:
   - autoscalers/status
   verbs:

@@ -24,7 +24,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 
-	mydomainv1alpha1 "autoscaler/m/api/v1alpha1"
+	hpazerov1alpha1 "autoscaler/m/api/v1alpha1"
 )
 
 // AutoScalerReconciler reconciles a AutoScaler object
@@ -33,9 +33,9 @@ type AutoScalerReconciler struct {
 	Scheme *runtime.Scheme
 }
 
-//+kubebuilder:rbac:groups=my.domain,resources=autoscalers,verbs=get;list;watch;create;update;patch;delete
-//+kubebuilder:rbac:groups=my.domain,resources=autoscalers/status,verbs=get;update;patch
-//+kubebuilder:rbac:groups=my.domain,resources=autoscalers/finalizers,verbs=update
+//+kubebuilder:rbac:groups=hpa.zero,resources=autoscalers,verbs=get;list;watch;create;update;patch;delete
+//+kubebuilder:rbac:groups=hpa.zero,resources=autoscalers/status,verbs=get;update;patch
+//+kubebuilder:rbac:groups=hpa.zero,resources=autoscalers/finalizers,verbs=update
 
 // Reconcile is part of the main kubernetes reconciliation loop which aims to
 // move the current state of the cluster closer to the desired state.
@@ -57,6 +57,6 @@ func (r *AutoScalerReconciler) Reconcile(ctx context.Context, req ctrl.Request) 
 // SetupWithManager sets up the controller with the Manager.
 func (r *AutoScalerReconciler) SetupWithManager(mgr ctrl.Manager) error {
 	return ctrl.NewControllerManagedBy(mgr).
-		For(&mydomainv1alpha1.AutoScaler{}).
+		For(&hpazerov1alpha1.AutoScaler{}).
 		Complete(r)
 }

@@ -1,4 +1,4 @@
-apiVersion: my.domain/v1alpha1
+apiVersion: hpa.zero/v1alpha1
 kind: AutoScaler
 metadata:
   name: autoscaler-sample
